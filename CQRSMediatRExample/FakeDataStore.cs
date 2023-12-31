@@ -49,6 +49,8 @@
             await Task.CompletedTask;
         }
 
+        public async Task<Product> GetProductById(int id) =>  await Task.FromResult(_products.Single(p => p.Id == id));
+        
 
     }
 }
